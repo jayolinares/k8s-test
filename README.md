@@ -25,7 +25,7 @@ kubectl apply -f ingress.yaml
 ```
 
 Verify that it's working:
-``
+```
 kubectl get ingress -A
 ```
 You should see a public IP assigned. 
