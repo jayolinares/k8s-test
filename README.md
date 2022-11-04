@@ -10,7 +10,7 @@ The point of entry for traffic is via an Ingess.
 I've also use Helm chart for this assessment (easier to re-use in the future!)
 
 Dependencies:
-- AKS cluster, of course.
+- Kubernetes cluster, of course.
 - install helm and kubectl.
 
 Deployment instructions:
