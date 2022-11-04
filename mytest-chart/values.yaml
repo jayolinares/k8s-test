@@ -1,0 +1,26 @@
+
+environment: prod #equal to NS? #pass as param? 
+
+replicaCount: 1
+
+
+containers:
+  image: "jayolinares/mytest"
+  name: mytest
+
+hpa:
+  autoscaling:
+    enabled: true
+    minReplicas: "2"
+    maxReplicas: "4"
+    targetCPU: "80"
+    targetMemory: "80"
+
+service:
+  enabled: true
+  type: ClusterIP
+  ports:
+    name: webapp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    app: "{{ .Release.Name }}-{{ .Values.environment }}"
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release:  {{ .Release.Name }}
+    environment: {{ .Values.environment }}  
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: "{{ .Release.Name }}-{{ .Values.environment }}"
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: "{{ .Release.Name }}-{{ .Values.environment }}"
+    spec:
+      containers:
+      - image: {{ .Values.containers.image }}
+        name: {{ .Values.containers.name }}
+        resources: {}
+status: {}
