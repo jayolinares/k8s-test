@@ -2,7 +2,7 @@
 
 It's a DIY kind of tech assessment, as long as you can demonstrate your skills in Kubernetes. 
 
-I got the app already packaged in a Docker image, see Dockerfile. 
+I got the app already packaged in a Docker image and has been published to Docker Hub. 
 
 The application is deployed in a Kubernetes cluster with HPA (auto-scaling) enabled. 
 The point of entry for traffic is via an Ingess.
